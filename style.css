@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-tx-primary:'roboto', sans-serif;
+}
+
+body{
+  background: black;
+  max-width: 192rem;
+  color: #ffff;
+  padding: 2rem;
+}
+
+header{
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
+button{
+  background: none;
+  border: none;
+}
+
+main{
+  max-height: 60rem;
+  height: 50rem;
+  
+}
+main{
+  background-image: url(./img/map.png);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.upLeft{
+  gap: 3rem;
+}
+.upRight{
+  gap: 6.5rem;
+}
+
+#fan{
+  margin-bottom: 4rem;
+}
+
+nav ul li span{
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+
+.donwLeft{
+  gap: 2rem;
+}
+
+.donwRigth{
+  gap: 2rem;
+}
+
+ul{
+  list-style: none;
+}
