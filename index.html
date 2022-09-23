@@ -25,7 +25,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="d-flex justify-content-between align-items-center">
+    <div
+      class="container-fluid statusBar d-flex justify-content-between align-items-center"
+    >
       <ul class="d-flex align-items-center upLeft">
         <li><img src="./img/locker.svg" alt="Cadeado branco" /></li>
         <li>
@@ -35,34 +37,71 @@
       </ul>
       <ul class="d-flex align-items-center upRight">
         <li><span>17°C</span></li>
-        <li><span>10:00</span></li>
+        <li><span id="time"></span></li>
       </ul>
-    </header>
+    </div>
     <main>
-      <div id="app"></div>
+      <div id="app">
+        <div class="parent">
+          <div class="div1 lg d-flex align-items-center justify-content-center">
+            <img src="./img/home.svg" alt="" />
+          </div>
+          <div
+            class="div2 lg2 d-flex align-items-center justify-content-center"
+          >
+            <img src="./img/closehome.svg" alt="" />
+          </div>
+          <div class="div3 md d-flex align-items-center justify-content-center">
+            <img src="./img/externallamps.svg" alt="" />
+          </div>
+          <div class="div4 md d-flex align-items-center justify-content-center">
+            <img src="./img/message.svg" alt="" />
+          </div>
+          <div class="div7 md d-flex align-items-center justify-content-center">
+            <img src="./img/plus.svg" alt="" />
+          </div>
+          <div class="div5 md d-flex align-items-center justify-content-center">
+            <img src="./img/dorr.svg" alt="" /><img src="./img/ar.svg" alt="" />
+          </div>
+          <div class="div6 md d-flex align-items-center justify-content-center">
+            <img src="./img/coffe.svg" alt="" />
+          </div>
+          <div class="div8 md d-flex align-items-center justify-content-center">
+            <img src="./img/homeGear.svg" alt="" />
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-      <nav class="d-flex justify-content-between align-items-center">
+      <nav class="d-flex justify-content-between align-items-center navMenu">
         <ul class="d-flex align-items-center donwLeft">
           <li>
-            <button><img src="./img/garage.svg" alt="Garagem branca" /></button>
+            <button>
+              <a onclick="route()" href="/home"
+                ><img src="./img/garage.svg" alt="Garagem branca"
+              /></a>
+            </button>
           </li>
           <li><img src="./img/defrost.svg" alt="defrost" /></li>
           <li><img src="./img/heater.svg" alt="heater" /></li>
         </ul>
         <ul class="d-flex align-items-center">
           <li>
-            <button><img src="./img/arrowUp.svg" alt="seta p/ cima" /></button>
+            <button id="setaCimaEsq">
+              <img src="./img/arrowUp.svg" alt="seta p/ cima" />
+            </button>
           </li>
-          <li><span>20°</span></li>
-          <button>
+          <li><span id="leftSide">20</span><span>°</span></li>
+          <button id="setaBaixoEsq">
             <img src="./img/arrowDown.svg" alt="seta p/ baixo" />
           </button>
-          <li><img id="fan" src="./img/fan.svg" alt="ventilador branco" /></li>
-          <button><img src="./img/arrowUp.svg" alt="seta p/ cima" /></button>
-          <li><span>20°</span></li>
+          <li><img src="./img/fan.svg" alt="ventilador branco" /></li>
+          <button id="setaCimaDir">
+            <img src="./img/arrowUp.svg" alt="seta p/ cima" />
+          </button>
+          <li><span id="rigthSide">20</span><span>°</span></li>
           <li>
-            <button>
+            <button id="setaBaixoDir">
               <img src="./img/arrowDown.svg" alt="seta p/ baixo" />
             </button>
           </li>
@@ -74,10 +113,6 @@
         </ul>
       </nav>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
