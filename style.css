@@ -9,13 +9,12 @@
   font-size: 62.5%;
   --ff-tx-primary:'roboto', sans-serif;
   --color:#4D4D4D;
-  --color2:#999999;
+  --color2:#ffff;
 }
 
 body{
-  background: black;
-  max-width: 192rem;
-  max-height: 60rem;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(44, 44, 44, 1) 66%);
   color: #ffff;
   padding: 2rem;
 }
@@ -34,6 +33,9 @@ button{
   border: none;
 }
 
+main{
+  height: 79.7rem;
+}
 .parent {
   padding-top: 2rem;
   display: grid;
@@ -88,7 +90,7 @@ button{
   border-radius: 3rem;
 }
 .md:hover, .lg:hover, .lg2:hover{
-  background-color: #6b6969;
+  background-color: #c4c4c4;
   scale: 1.02;
   transition: .3s;
 
@@ -98,15 +100,17 @@ button{
   width: 40rem;
   height: 23.6rem;
 }
-main{
-  height: 80rem;
+.hide{
+  display: none;
 }
-/* main{
-  background-image: url(./img/map.png);
+.principal{
+  width: 100%;
+  height: 79.7rem;
   background-position: top center;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
-} */
+
+}
 
 .upLeft{
   gap: 3rem;

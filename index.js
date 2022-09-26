@@ -1,7 +1,8 @@
 import Router from './routers.js'
 const router = new Router()
-router.add('/home', './home.html')
-router.add('/', './pages/home.html')
+
+router.add('/home', '/home.html')
+router.add('/', '/blank.html')
 
 let hours = new Date()
 
@@ -19,6 +20,7 @@ const setaBaixoEsq = document.querySelector('#setaBaixoEsq')
 const setaBaixoDir = document.querySelector('#setaBaixoDir')
 const leftSide = document.querySelector('#leftSide')
 const rigthSide = document.querySelector('#rigthSide')
+
 
 function displayL(tempLeftSide) {
   leftSide.textContent = String(tempLeftSide)

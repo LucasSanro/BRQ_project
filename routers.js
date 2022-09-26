@@ -5,11 +5,12 @@ export default class Router {
     this.routes[routeName] = page
   }
 
-  route(event) {
-    event = event || window.event
+  route(href,event) {
+    // event = event
     event.preventDefault()
-    window.history.pushState({}, '', event.target.href)
+    window.history.pushState({}, '', href)
     this.handle()
+    console.log(event,href)
   }
 
   handle() {
@@ -20,10 +21,6 @@ export default class Router {
       .then(data => data.text())
       .then(html => {
         document.querySelector('#app').innerHTML = html
-        const body = document.querySelector('body')
-        const className = pathname.replace('/', '')
-        body.removeAttribute('class')
-        if (!!className) body.classList.add(className)
       })
 
     console.log(route)
