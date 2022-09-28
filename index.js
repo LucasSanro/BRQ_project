@@ -1,16 +1,12 @@
-import Router from './routers.js'
-const router = new Router()
-
-router.add('/home', '/home.html')
-router.add('/', '/blank.html')
 
 let hours = new Date()
 
 function timer() {
   const h = hours.getHours()
   const m = hours.getMinutes()
-  let time = h + ':' + m
+  let time = String(h).padStart(2,0) + ':' + String(m).padStart(2,0)
   return time
+
 }
 
 const time = document.querySelector('#time')
@@ -65,7 +61,5 @@ setaBaixoDir.addEventListener('click', function () {
   displayR(temp)
 })
 
-router.handle()
-window.onpopstate = () => router.handle()
-window.route = () => router.route()
+
 time.textContent = timer()

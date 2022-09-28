@@ -85,9 +85,15 @@ main{
   height: 22.9rem;
 }
 
+.md{
+  width: 40rem;
+  height: 23.6rem;
+}
+
 .lg,.lg2, .md {
   background-color: var(--color2);
   border-radius: 3rem;
+  cursor: pointer;
 }
 .md:hover, .lg:hover, .lg2:hover{
   background-color: #c4c4c4;
@@ -96,10 +102,6 @@ main{
 
 }
 
-.md{
-  width: 40rem;
-  height: 23.6rem;
-}
 .hide{
   display: none;
 }
